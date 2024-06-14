@@ -40,14 +40,77 @@
 
 // convert(a, course);
 
-const arr = [4, 8, 15, 16, 23, 42];
+// const arr = [4, 8, 15, 16, 23, 42];
 
-const copy1 = arr;
-let copy = arr.map((el) => el);
+// const copy1 = arr;
+// let copy = arr.map((el) => el);
 
-copy[0] = 2;
+// copy[0] = 2;
 
-console.log(copy1 === arr);
-console.log(copy === arr);
-console.log(`Здесь copy - ${copy}`);
-console.log(`Здесь arr - ${arr}`);
+// console.log(copy1 === arr);
+// console.log(copy === arr);
+// console.log(`Здесь copy - ${copy}`);
+// console.log(`Здесь arr - ${arr}`);
+
+// 1
+// let arr1 = [5, 3, 8];
+// let arr2 = [7, 1, 2];
+
+// console.log([...arr1,...arr2].sort());
+
+// 2
+// let numbers = [1, 2, 3, 4, 5, 6];
+// let a = [];
+
+// numbers.forEach(el => {if(el % 2 === 0) {a.push(el)}})
+
+// console.log(numbers.filter(el => el % 2 === 0));
+// console.log(a);
+
+// 3
+// let numbers = [1, 2, 3];
+
+// console.log(numbers.map(el => el *2));
+
+// 4
+// let numbers = [10, 20, 30, 40, 50];
+
+// numbers.sort((a, b) => b - a);
+
+// console.log(numbers[0]);
+
+// 1obj
+// let obj1 = { a: 1, b: 2 };
+// let obj2 = { b: 3, c: 4 };
+
+// console.log({...obj1, ...obj2});
+
+// 2obj
+// let user = { name: 'Alice', age: 25 };
+
+// function newObj(obj) {
+//    return {...obj}
+// };
+
+// console.log(newObj(user));
+
+// 3obj
+let user = { name: 'Alice', age: 25, city: 'New York' };
+let keys = ['name', 'city'];
+
+function newObj(obj, arr) {
+  let newObj = {};
+
+  console.log(obj);
+  for (let key in obj) {
+    arr.forEach(el => {if(el == key) {
+      // console.log(el);
+      // console.log(key);
+      // console.log(obj.key);
+    }})
+  }
+
+  return newObj
+}
+
+console.log(newObj(user, keys));
