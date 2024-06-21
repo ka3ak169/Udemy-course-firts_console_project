@@ -95,22 +95,55 @@
 // console.log(newObj(user));
 
 // 3obj
-let user = { name: 'Alice', age: 25, city: 'New York' };
-let keys = ['name', 'city'];
+// let user = { name: 'Alice', age: 25, city: 'New York' };
+// let keys = ['name', 'city'];
 
-function newObj(obj, arr) {
-  let newObj = {};
+// function newObj(obj, arr) {
+//   let newObj = {};
 
-  console.log(obj);
-  for (let key in obj) {
-    arr.forEach(el => {if(el == key) {
-      // console.log(el);
-      // console.log(key);
-      // console.log(obj.key);
-    }})
-  }
+//   for (let key in obj) {
+//     arr.forEach(el => {if(el == key) {
+//       newObj[key] = obj[key];
+//     }})
+//   }
+//   return newObj
+// }
 
-  return newObj
-}
+// console.log(newObj(user, keys));
 
-console.log(newObj(user, keys));
+// 4obj
+// let person = { name: 'Alice', age: 25 };
+// let renameMap = { name: 'fullName', age: 'years' };
+
+
+// function newNames(obj, objNewName) {
+//   let newObj = {};
+
+//   for (const key in obj) {
+//     Object.keys(objNewName).forEach(el => {
+//       if (key === el) {
+//         newObj[objNewName[key]] = obj[key];
+//       }
+//     })
+//   }
+
+//   return newObj
+// }
+
+// console.log(newNames(person, renameMap));
+
+// 5obj
+// let keys = ['name', 'age', 'city'];
+// let values = ['Alice', 25, 'New York'];
+
+// function newObj(arrKeys, arrValues) {
+//   let newObj = {};
+
+//   arrKeys.forEach((el, i) => {
+//     newObj[el] = arrValues[i]
+//   });
+
+//   return newObj
+// }
+
+// console.log(newObj(keys, values));
